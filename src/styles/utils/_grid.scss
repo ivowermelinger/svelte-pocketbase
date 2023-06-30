@@ -1,0 +1,42 @@
+@import '@hi_digital/easy-flex';
+
+$container-max: 1630px;
+
+$columns-amount: 24;
+
+$gutter-width: 15px;
+$gutter-width-full: 30px;
+$gutter-width-huge: 30px;
+$gutter-width-large: 30px;
+$gutter-width-medium: 30px;
+$gutter-width-small: 15px;
+$gutter-width-tiny: 15px;
+
+// First we must register the breakpoints
+@include easy-flex-breakpoint('tiny', 480px, $gutter-width-tiny, 15px);
+@include easy-flex-breakpoint('small', 768px, $gutter-width-small, 15px);
+@include easy-flex-breakpoint('medium', 1024px, $gutter-width-medium, 25px);
+@include easy-flex-breakpoint('large', 1200px, $gutter-width-large, 25px);
+@include easy-flex-breakpoint('huge', 1440px, $gutter-width-huge, 25px);
+@include easy-flex-breakpoint('full', $container-max, $gutter-width-full, 25px);
+
+// Then we create the grid
+@include create-easy-flex((
+        columns: $columns-amount,
+        container-width: 100%,
+        container-max-width: $container-max,
+        gutter-width: $gutter-width,
+        vertical-space: 15px,
+));
+
+@include easy-add-class(tac) {
+  text-align: center;
+}
+
+@include easy-add-class(tal) {
+  text-align: left;
+}
+
+@include easy-add-class(tar) {
+  text-align: right;
+}
