@@ -15,9 +15,25 @@ a {
   text-decoration: none;
   border: 1px dotted black;
   color: #000;
-
-  &:visited {
-
-  }
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+.btn {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #656565;
+  padding: 8px 16px;
+  color: #000;
+  transition: background-color 250ms, color 250ms;
+
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #2e7db0;
+  }
+}
