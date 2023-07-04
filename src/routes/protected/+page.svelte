@@ -5,6 +5,7 @@
     <div class="row">
         <div class="gr-24">
             <h1>Protected Route</h1>
+            <a href="/protected/child">Protected Child Route</a>
         </div>
         <div class="gr-24">
             <ul>
