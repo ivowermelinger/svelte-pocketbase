@@ -9,7 +9,8 @@ export const load = (async ({ request, cookies }) => {
 		// Set redirect url to cookies
 		const referer: string | null = request.headers.get('referer');
 
-		if (referer) {
+		// Check if a referer exists and is not the login page
+		if (referer && !referer.includes('login')) {
 			cookies.set('redirect', referer, {
 				secure: true,
 				httpOnly: true,
