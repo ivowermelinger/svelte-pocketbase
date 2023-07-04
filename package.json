@@ -13,7 +13,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
-    "production": "pm2 reload ecosystem.config.cjs",
+    "start": "pm2 reload ecosystem.config.cjs",
     "stop": "pm2 stop ecosystem.config.cjs",
     "monitor": "pm2 monit",
     "kill": "pm2 kill"
